@@ -48,6 +48,7 @@ docker-compose down --rmi all -v
 | POST  | `/devices/upload`        | Запись новых измерений       |
 | GET   | `/devices/stats/all`     | Статистика по всем данным    |
 | GET   | `/devices/stats/grouped` | Статистика с группировкой    |
+|GET    |`/devices/tasks/{task_id}`| Проверки статуса асинхронных задач|
 
 API: *http://localhost:8000/docs*
 
@@ -63,3 +64,6 @@ locust -f locustfile.py
 
 Результаты:
 Можно посмотреть на картинках в репозитории.
+
+![статистика по запросам](total_requests_per_second_1745158716.png)
+![пропорциональность запров](2locratio.PNG)
